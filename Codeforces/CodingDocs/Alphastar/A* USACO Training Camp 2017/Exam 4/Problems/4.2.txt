@@ -1,0 +1,64 @@
+Hockey Matches
+==============
+Time limit  : 3 sec
+Memory limit: 64 MB
+-------------------
+
+Bob has arrived in New Jersey and he would like to visit some of the 
+hockey matches. He does not have any team preferences and he does not 
+have any time restrictions. If he had enough money, he would be able 
+to visit all of the matches. Unfortunately, he has limited money,
+all of which can be spent on tickets.
+
+Knowing how much a ticket costs for each match, calculate the number 
+of ways he can attend a set of matches without exceeding his budget.
+Two ways are considered different if there exists a match which is 
+visited in one of the ways, but not visited in the other.
+
+PROBLEM NAME: hockey
+
+INPUT FORMAT:
+
+A description of Bob's situation is read from the standard input.
+The first line of input contains two positive integers N and M
+(1 <= N <= 40, 1 <= M <= 10^18), denoting the number of matches 
+and dollars Bob can spend.
+
+The second line contains N space-separated positive integers, none 
+of them exceeding 10^16, representing costs of the matches in dollars.
+
+OUTPUT FORMAT:
+
+Output a single line with the number of ways Bob can visit the matches.
+Please note that due to the limit on N, this number will be at most 2^40.
+
+SAMPLE INPUT:
+
+5 1000
+100 1500 500 500 1000
+
+SAMPLE OUTPUT:
+
+8
+
+OUTPUT DETAILS:
+
+The eight possible ways are:
+
+* no matches visited
+* the match worth 100
+* the first match worth 500
+* the second match worth 500
+* the match worth 100 and the first match worth 500
+* the match worth 100 and the second match worth 500
+* both matches worth 500
+* the match worth 1000.
+
+TEST DATA:
+
+There are 20 tests. The upper bounds on N and M of tests are as follows:
+
+              1-4    6-8    10-14    16-20
+             -----------------------------
+Limit on N     10     20      40       40
+Limit on M   10^6   10^18    10^6    10^18

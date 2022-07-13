@@ -1,0 +1,58 @@
+% To compile,
+% $ pdflatex <file.tex>
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb, amsmath}
+
+\begin{document}
+
+\title{USACO Problem: Minefield}
+
+\author{Michael Wong}
+\date{March 25, 2018}
+
+\maketitle
+
+\section{Introduction}
+Hi Mr. Dean. I'm proposing a USACO Silver Problem. It's a simple graph implementation problem, but I tried to make it creative.
+
+\section{Statement}
+
+Captain Bessie is navigating her ship through an gridded \emph N x \emph N \begin{equation*} (10 <= N <= 10^4) \end{equation*} sea when she feels an explosion rock the hull. BOOM! They're surrounded by \emph M mines! \begin{equation*} (1 <= M <= 10^3) \end{equation*} After inspecting damages, Bessie realizes that her new ship will sink unless she repairs the hole. However, the fastest route to the repair bay lies through the underwater minefield. Bessie can set off one mine manually, and she wants to know the maximum number of mines she can set off without hitting her ship. A mine's explosion sets off another mine if its gunpowder weight \emph W\begin{equation*} (1 <= W <= 10^9)\end{equation*} is greater than the distance between them.
+
+\bf \noindent \newline INPUT FORMAT \normalfont(file mines.in):
+\newline The first line will contain N and M, followed by the ship's coordinates on the grid. The following M lines describe the x and y coordinates of the mine i (1...M) along with its gunpowder weight. The grid and coordinates are 1-based, and it is guranteed that the coordinates will fit on the given grid.
+
+\bf \noindent \newline OUTPUT FORMAT \normalfont(file mines.out):
+\newline Output the maximum number of gunpowder weight that can be exploded without destroying the ship. It is guranteed that a solution exists. You may have to use long long to store the result.
+\bf \noindent \newline SAMPLE INPUT:
+\normalfont
+\newline10 4
+\newline5 5
+\newline7 7 2
+\newline10 10 4
+\newline2 3 2
+\newline3 6 7
+\noindent \newline \newline \bf SAMPLE OUTPUT:
+\normalfont 6
+\noindent \newline \newline In this example, we can achieve the best gunpowder weight by setting off mine 2. Anything that sets off mine 4 would blow up the ship.
+
+
+\section{Solution}
+
+
+\noindent \newline1) First, we create a function that computes the distance between two nodes given their x and y coordinates. 
+
+\noindent \newline2) Iterate over the nodes.
+
+\noindent \newline3) For each node you iterate over, try setting it off and marking all of the nodes it sets off in its chain reaction using a DFS/BFS. Use a simple \begin{equation*} O(M^2)\end{equation*}solution where for each node, you run through the rest of the mines and check if they're reached, i.e., if the distance between them is less than the gunpowder's weight. Mark the ones that have already exploded. If they are, run another DFS/BFS from the new mine.
+\noindent \newline4) When you have finished iterating from the starting mine, clear all visited lists, reset count, and move onto the next mine.
+\noindent \newline \newline5) If the explosion eventually reaches the ship's node, discard the result.
+
+\noindent \newline6) Else, mark that node in an array with the total gunpowder weight it set off, and mark the node as visited.
+
+\noindent \newline7) After you have visited all the nodes and ran a DFS/BFS for each one, find the maximum number of gunpowder you could have set off by running a simple iterative search.
+
+\noindent \newline8) Return that value.
+
+\end{document}

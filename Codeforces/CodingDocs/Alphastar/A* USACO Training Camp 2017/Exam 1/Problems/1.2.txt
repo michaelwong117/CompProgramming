@@ -1,0 +1,100 @@
+The MP3 Player
+==============
+Time limit  : 3 sec
+Memory limit: 32 MB
+-------------------
+
+Bessie's new MP3 player has many interesting features, one of them 
+being the key lock. All the keys are locked after more than T 
+seconds of inactivity. After the key lock is engaged, no key 
+performs its original function, but if any key is pressed, the key 
+lock is disengaged.
+
+For example, assume that T = 5 and the player is currently locked. 
+Bessie presses the key A, waits for 3 seconds, presses the key B, 
+waits for 5 seconds, presses C, waits for 6 seconds, and presses D. 
+In this case only the keys B and C perform their regular functions. 
+Note that the keys became locked between C and D was pressed.
+
+Sound level of the MP3 player is controlled by the + and - keys, 
+increasing and decreasing volume by 1 unit respectively. The sound 
+level is an integer between 0 and V_max. Pressing the + key at volume 
+V_max or pressing the - key at volume 0 leaves the volume unchanged.
+
+Bessie does not know the value of T. She wanted to find it by an 
+experiment. Starting with a locked keyboard, she pressed a sequence 
+of N + and - keys. At the end of the experiment Bessie read the final 
+volume from the player's display. Unfortunately, she forgot to note 
+the volume before her first keypress. For the purpose of this task, 
+the unknown initial volume will be denoted V_1 and the known final 
+volume will be denoted V_2.
+
+You are given the value V_2 and a list of keystrokes in the order 
+in which Bessie made them. For each key, you are given the type of 
+the key (+ or -) and the number of seconds from the beginning of 
+the experiment to the moment when the key was pressed. The task 
+is to find the largest possible integer value of T which is
+consistent with the outcome of the experiment.
+
+PROBLEM NAME: mp3
+
+INPUT FORMAT:
+
+The first line of the input contains three space-separated integers 
+N, V_max and V_2 (0 <= V_2 <= V_max). Each of the next N lines 
+contains a description of one key in the sequence: a character 
++ or -, a space and an integer C_i (0 <= C_i <= 2 x 10^9), the 
+number of seconds from the beginning of the experiment. You may 
+assume that the keypresses are in sorted order and that all times 
+are distinct (i.e., C_i < C_{i + 1} for all 1 <= i < N).
+
+* You may assume that 2 <= N <= 100,000 and 2 <= V_max <= 5000.
+* In test cases worth 40 points N <= 4000.
+* In test cases worth 70 points N x V_max <= 400,000.
+
+OUTPUT FORMAT:
+
+If T can be arbitrarily large, output a single line containing the 
+word "infinity" (quotes for clarity).
+
+Otherwise, output a single line containing two integers T and V_1 
+separated by a single space.
+
+The values must be such that carrying out the experiment with 
+locking time T starting at volume V_1 gives the final volume V_2. 
+If there are multiple possible answers, output the one with the 
+largest T; if there are still multiple possible answers, output 
+the one with the largest V_1.
+
+(Note that at least one solution always exists: for T = 0 none of 
+the keys performs its action, so it suffices to take V_1 = V_2.)
+
+EXAMPLES:
+
+Input:
+6 4 3
+- 0
++ 8
++ 9
++ 13
+- 19
+- 24
+
+Output:
+5 4
+
+For T = 5 the keys perform the following actions: unlock, unlock, 
++, +, unlock, -. For any we would get V_2 = 3. Note that the output 
+contains the largest possible V_1. For the last two keystrokes will 
+both be active, hence it will be impossible to have V_2 = 3.
+
+Input:
+3 10 10
++ 1
++ 2
++ 47
+
+Output:
+infinity
+
+If V_1 = 10 then for any T we'll have V_2 = 10.

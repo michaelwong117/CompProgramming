@@ -1,0 +1,139 @@
+what do you need to know to compute larger states
+breaking up the problem into subproblems
+
+dp[i] //can i add the next thing in a way that helps me connect my answer
+//can i go from dp[i] -> dp[i+1], or do I need something other information
+//Ok, we need something else
+//try adding dp[i][j] - > dp[i+1][j]
+//a state is the information you need to move to other states
+//you might realize, j is determined by i, so I can reduce it to dp[i]
+//try to relate a problem to a subproblem, then calculate your way up
+
+//ok, I'm keeping track of everything from 0...i
+//then you look at your transitions, you only use i
+do I really need to use eveyrthing else
+what am I actually using in my transitions
+
+don't be afraid to move away from the problem statement
+you realize oh, I can represent this as an array that needs to be sorted
+I can abstract that problem into an array
+
+looking at pro peoples implementation
+
+
+//USACO NOTES
+
+
+If you're practicing, you can afford to think through problems for a few days or weeks
+If you're not making any progress on the problem, then you can start looking at the solution and move on
+
+Editorials: Upsolving is extremely beneficial
+
+After contest look at the editorial and other people's comments
+
+first understand the problem
+also, understand the idea behind it
+
+Oh, this problem can be solved using bitsets
+Don't just understand the solution, understand why it works and how to apply it
+
+Any practice is better than no practice
+
+Try to get footing into the problem, work out samples, imagine it how it would work
+
+//PROBLEM SOLVING STRATEGY
+
+Read problem statement
+Anything pops into your head immediately
+look at samples, work them out by hand, see how the sample input goes into the sample output
+how did you go from sample input to sample output?
+You might have a slow solution, but you can try optimizing it
+Redundant information, key observation that reduces amount I have to search
+If that doesn't work, maybe you try thinking the problem a different way
+
+//COUNTERCASING
+Come up with some counter cases
+Specifically come up with counter cases
+Based on what your algorithm does, try to undermine its principles (greedy) with cases
+If program is short, just code it up and submit
+The harder it is to code the more sure you want to be that it's correct
+
+
+//reading code properly
+When you look at someone's code, their program is doing something
+Try to think about their algorithm abstractly
+What is the idea behind their code? 
+
+He's taking the sum of the numbers and multiplying it by the largest one. Hmm, interesting, what can I do?
+
+//practicing
+if you couldn't solve codeforces D.
+100%, go back, look at D some more, go back, look at a comment, think about it some more, then go back and read the editorial
+Not too easy-- just implementation practice
+Not too hard-- now you just know one specific technique
+"The science of training in competitive programming"
+
+//toolkit and observations
+Algorithmic side - knowing algorithms
+Intuitive side- making observation and simplifying problen
+
+//best sites
+USACO
+Codeforces
+Atcoder (all about intuition, you need insight)
+
+
+
+
+
+//Greedy proof
+Greedy problems skip over possibilities. Greedies make assumptions about the data, see if those are always right. 
+
+//balance life and coding
+I go home, do my school work, then end up doing zero problems
+Schoolwork and homework have deadlines
+USACO, if I don't solve problems today, it's ok
+You really need to be clear on how many problems each day, or how much time to spend
+
+If you're thinking about some problem, if your teacher is trolling, just keep your problem in your head and work on it
+THINK ABOUT USACO DURING CLASS
+
+in free time, think about usaco
+
+//implementing
+articulating ideas on paper is the middle ground
+the solution is how to do something (not that specific)
+the code is very specific
+if it's something easy to do, just do it
+otherwise write pseudocode
+
+Intially, avichal would code without actually knowing what you're doing
+
+Writing your code is just submitting your answer
+
+You want to have a clear idea of what you're doing
+
+
+//CODINGNOTES
+
+//two pointers is always an option, building up in one direction, iterating backwards so you don't have to keep redoing
+//things, sorting in a way such that you're amortizing your complexity
+
+
+//think of dp in terms of max/min value at dp[x][y][...] where x,y,... are important variables that determine the value
+//think about the transition of each of the variables to the next state and what can be added
+//how does what can be added affect the transition of the variables?
+
+//if the dp is total value for some unique objects, think of it in terms of the max value for x objects, not a specific
+//case for each object
+
+//for [l, r] range, try fixing one point and seeing what works and doesn't.
+
+//if you find that you have to do one operation many times, see if you can speed it up by doing multiple operations at the same time,
+//i.e., use a map, prefix sums, sort it
+
+
+
+
+
+

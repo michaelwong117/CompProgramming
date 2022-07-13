@@ -1,0 +1,100 @@
+EXAM 4 (C++)
+The 5 highest grades:
+1.	Andy Wang		98%
+2.	Jonathan Shoemaker	98%
+3.	Tony Kim		98%
+4.	Spencer Compton		91%
+5.	Bennett Liu		76%
+
+EXAM 4 (JAVA)
+The 3 highest grades:
+1.	Yibo Huang	98%
+2.	William Yue	8%
+3.	Chris Pan	0%
+
+
+Exam 4: Top 5
+Rank	Name	hermes	frog	empodia	 Total
+1	Jonathan100	100	95	295
+2	Andy	100	100	95	295
+3	Tony	100	100	95	295
+4	Yibo	100	100	95	295
+5	Spencer	100	80	95	275
+
+
+EXAM 3 (C++)
+The 5 highest grades:
+1.	Franklyn Wang		100%
+2.	Jonathan Shoemaker	90%
+3.	Tony Kim		75%
+4.	Dougy Ouyang		73%
+5.	Spencer Compton		67%
+
+Exam 3: Top 5
+Rank	Name	phidias	bus	tournament	Total
+1	Franklyn100	100	100		300
+2	Jonathan100	70	100		270
+3	Tony	100	100	25		225
+4	Dougy	100	50	70		220
+5	Spencer		100	100		200
+
+EXAM 2 (C++)
+The 5 highest grades:
+1.	Spencer Compton		83%
+2.	Dougy Ouyang		78%
+3.	Jonathan Shoemaker	77%
+4.	Franklyn Wang		67%
+5.	Stan Zhang		42%
+
+EXAM 2 (JAVA)
+The 4 highest grades:
+1.	Eric Zhang		100%
+2.	Yibo Huang		85%
+3.	Chaitanya Ravuri	75%
+4.	Chris Pan		33%
+
+Exam 2: Top 5
+Rank	Name	maintenance	ricehub	code	 Total
+1	Eric	100		100	100	300
+2	Yibo	100		95	55	250
+3	Spencer	100		100	50	250
+4	Dougy	100		100	35	235
+5	Jonathan100		100	30	230
+
+EXAM 1 (C++)
+The 5 highest grades:
+1.	Jonathan Shoemaker	99%
+2.	Ethan Guo		87%
+3.	Stan Zhang		67%
+4.	Bennett Liu		67%
+5.	Andy Wang		63%
+
+EXAM 1 (JAVA)
+The 3 highest grades:
+1.	Eric Zhang		100%
+2.	Chaitanya Ravuri	78%
+3.	Mehul Raheja		69%
+
+Exam 1: Top 5
+Rank	Name		fish	farmer	boundary	 Total
+1	Eric		100	100	100		300
+2	Jonathan	100	100	96		296
+3	Ethan		100	100	60		260
+4	Chaitanya	50	100	84		234
+5	Mehul		100	100	8		208
+
+SAMPLE (C++)
+The 5 highest grades:
+1.	Franklyn Wang		100%
+2.	Tony Kim		100%
+3.	Ethan Guo		100%
+4.	Jonathan Shoemaker	100%
+5.	Bennett Liu		100%
+
+SAMPLE (JAVA)
+The 5 highest grades:
+1.	Ethan Guo		100%
+2.	William Yue		100%
+3.	Chaitanya Ravuri	100%
+4.	Chris Pan		100%
+5.	Yibo Huang		100%

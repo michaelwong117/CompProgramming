@@ -1,0 +1,21 @@
+Hello World!
+============
+Time limit  : 3 sec
+Memory limit: 16 MB
+-------------------
+
+Output "Hello World!" on screen.
+
+PROGRAM NAME: hello
+
+INPUT FORMAT:
+
+No input.
+
+OUTPUT FORMAT:
+
+Just one line that has "Hello World!".
+
+SAMPLE OUTPUT:
+
+Hello World!

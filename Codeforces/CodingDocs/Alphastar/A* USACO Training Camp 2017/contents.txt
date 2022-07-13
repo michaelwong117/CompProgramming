@@ -1,0 +1,23 @@
+Sample
+Hello World! (hello) - [16 MB, 3 sec]
+This is a test! (test) - [16 MB, 3 sec]
+
+Exam 1 (May 6, 9:30am-1:00pm)
+A Huge Tower (tower) - [32 MB, 1 sec]
+The MP3 Player (mp3) - [32 MB, 1 sec]
+Raisins (raisins) - [64 MB, 1 sec]
+
+Exam 2 (May 6, 2:00pm-5:30pm)
+Sails (sails) - [64 MB, 1 sec]
+Cow Classes (cclassg) - [32 MB, 1 sec]
+Training (training) - [32 MB, 1 sec]
+
+Exam 3 (May 7, 9:30am-1:00pm)
+Miners (miners) - [16 MB, 1 sec]
+Finding Barn Locations (barnloc) - [16 MB, 1 sec]
+Mecho (mecho) - [32 MB, 1 sec]
+
+Exam 4 (May 7, 2:00pm-5:30pm)
+Pairs (pairs) - [128 MB, 1 sec]
+Hockey Matches (hockey) - [64 MB, 1 sec]
+Flood (flood) - [64 MB, 1 sec]

@@ -1,0 +1,74 @@
+Fish
+======================
+Time limit  : 1 sec
+Memory limit: 16 MB
+--------------------
+
+In a small coastal country, all towns are situated on a long 
+coastline (which we will model as a straight line). A long 
+straight road runs along the coast, connecting the towns. The 
+position of each town can be described by a single non-negative 
+integer - the distance (in kilometers) from the start of the road.
+
+Most of the citizens are fishermen, and they catch great amounts 
+of fish. After the fishing season is over and before the tourist 
+season starts, the fish can be transported between different 
+towns. A town can accommodate X tourists if it has X tons of fish 
+available. The goal is to accommodate the largest possible number 
+of tourists while distributing them evenly between towns. In other 
+words, we want to find the largest integer Y for which it is 
+possible to distribute fish so that each town can accommodate at 
+least Y tourists.
+
+In one shipment, an integral number of tons of fish is sent from 
+one town to another. During transportation, one ton of fish per 
+kilometer traveled is lost to hungry pillagers descending from the 
+mountains. More formally, if a town ships F tons of fish to another 
+town that is D kilometers away, then F-D tons will arrive at the 
+destination; if F is less than D, then the entire shipment is lost.
+
+It is possible to arbitrarily repackage and combine shipments in 
+intermediate towns. For example, we can send shipments from towns 
+A and B to town C, combine half of the remaining fish from both 
+shipments with the fish originating in C and send it in a single 
+large shipment from town C to town D.
+
+TASK:
+
+Write a program that, given the positions of all towns and the 
+amount of fish each town produces, determines the largest number 
+of tourists that can be accommodated by each city after the fish 
+has been distributed.
+
+INPUT FORMAT:
+
+The first line of input contains an integer N, 1 <= N <= 100,000, 
+the number of towns.
+
+Each of the following N lines contains two integers P and F, 
+0 <= P, F <= 10^12, the position of a town (in kilometers) and the 
+amount of fish it produces (in tons). The towns will be sorted in 
+ascending order of position. The positions of all towns will be 
+distinct.
+
+In 50% of all test cases, N will be at most 100 and each town will 
+produce at most 100 tons of fish.
+
+OUTPUT FORMAT:
+
+The first and only line of output should contain the largest number 
+of tourists Y from the task description.
+
+EXAMPLES
+
+input:	       input:		  input:
+
+3	       3		  4
+1 0	       5 70		  20 300
+2 21	       15 100		  40 400
+4 0	       1200 20		  340 700
+				  360 600
+
+output:	       output:		  output:
+				  
+6	       20		  415

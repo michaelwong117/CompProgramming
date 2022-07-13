@@ -1,0 +1,27 @@
+This is a test!
+============
+Time limit  : 3 sec
+Memory limit: 16 MB
+-------------------
+
+Given a integer N output "This is a test!" N times on screen.
+
+PROGRAM NAME: test
+
+INPUT FORMAT:
+
+* Line 1: N
+
+SAMPLE INPUT:
+
+3
+
+OUTPUT FORMAT:
+
+* Line 1..N: Each line contains "This is a test!"
+
+SAMPLE OUTPUT:
+
+This is a test!
+This is a test!
+This is a test!

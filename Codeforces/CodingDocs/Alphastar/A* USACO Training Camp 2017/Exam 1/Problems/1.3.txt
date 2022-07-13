@@ -1,0 +1,105 @@
+Raisins
+=======
+Time limit  : 3 sec
+Memory limit: 64 MB
+-------------------
+
+Bonny needs to cut a slab of chocolate with raisins. The chocolate 
+is a rectangular block of identical square pieces. The pieces are 
+aligned with the edges of the chocolate, and they are arranged in 
+N rows and M columns, for a total of N*M pieces. Each piece has
+one or more raisins on it, and no raisins lie between or across
+pieces.
+
+Initially, the chocolate is one single, monolithic block. Bonny
+needs to cut it into smaller and smaller blocks until finally 
+she has cut the chocolate down to its N*M individual pieces. 
+As Bonny is very busy, she needs the help of her assistant, 
+Sly Peter, to do the cutting. Peter only makes straight line, 
+end-to-end cuts and he wants to be paid for every single cut he 
+makes. Bonny has no money at hand, but she has plenty of raisins 
+left over, so she offers to pay Peter in raisins. Sly Peter agrees 
+to this arrangement, but under the following condition: every time 
+he cuts a given block of chocolate into two smaller blocks, he has 
+to be paid as many raisins as there are on the block he was given.
+
+Bonny wants to pay Peter as little as possible. She knows how many 
+raisins there are on each of the N*M pieces. She can choose the 
+order in which she gives Peter any remaining blocks, and she can 
+also tell Peter what cuts to make (horizontal or vertical) and 
+where exactly to make them. Help Bonny decide how to cut the 
+chocolate into individual pieces, so that she pays Sly Peter as 
+few raisins as possible.
+
+Write a program that, given the number of raisins on each of the 
+individual pieces, determines the minimum number of raisins that 
+Bonny will have to pay Sly Peter.
+
+* 1 <= N, M <= 50 The number of pieces on each side of the chocolate
+* 1 <= R_{k,p} <= 1000 The number of raisins on the piece in the 
+kth row and the pth column
+
+PROBLEM NAME: raisins
+
+INPUT FORMAT:
+
+Your program must read from standard input the following data:
+
+* The first line contains the integers N and M, separated by a 
+single space.
+
+* The next N lines describe how many raisins there are on each 
+piece of the chocolate. The kth of these N lines describes the 
+kth row of the chocolate. Each such line contains M integers
+separated by single spaces. The integers describe the pieces on 
+the corresponding row in order from left to right. The pth 
+integer on the kth line (among these N lines) tells you how many 
+raisins are on the piece in the kth row and the pth column.
+
+For a number of tests, worth a total of 25 points, N and M will 
+not exceed 7.
+
+OUTPUT FORMAT:
+
+Your program must write to standard output a single line 
+containing a single integer: the minimum possible number of 
+raisins that Bonny would have to pay Sly Peter.
+
+SAMPLE INPUT:
+
+2 3
+2 7 5
+1 9 5
+
+SAMPLE OUTPUT:
+
+77
+
+OUTPUT DETAILS:
+
+One possible way (out of many) to achieve a cost of 77 is as follows:
+
+2 7 5    2 7 | 5    2 7 | 5    2 | 7 | 5    2 | 7 | 5
+                         --    -- --- --    -- --- --    
+1 9 5    1 9 | 5    1 9 | 5    1 9   | 5    1 | 9 | 5
+
+The first cut that Bonny asks Peter to make separates the third 
+column from the rest of the chocolate. Bonny needs to pay Peter 29 
+raisins for this.
+
+Then Bonny gives Peter the smaller of the two blocks: the one that 
+has two pieces with 5 raisins each, and asks Peter to cut the block 
+in two in exchange for 10 raisins.
+
+After this, Bonny gives Peter the largest remaining block: the one 
+having pieces with 2, 7, 1 and 9 raisins respectively. Bonny asks 
+Peter to cut it horizontally, separating the first and the second
+row and pays him 19 raisins.
+
+Following this, Bonny gives Peter the top-left block, paying 9 
+raisins. Finally, Bonny asks Peter to split the bottom-left block, 
+paying 10 raisins.
+
+The total cost to Bonny is 29 + 10 + 19 + 9 + 10 = 77 raisins. No 
+other cutting arrangement can get the chocolate cut into its 6 
+pieces at a smaller cost.

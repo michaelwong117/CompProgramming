@@ -1,0 +1,44 @@
+Python 2.6.1 (r261:67515, Jun 24 2010, 21:47:49) 
+[GCC 4.2.1 (Apple Inc. build 5646)] on darwin
+Type "copyright", "credits" or "license()" for more information.
+
+    ****************************************************************
+    Personal firewall software may warn about the connection IDLE
+    makes to its subprocess using this computer's internal loopback
+    interface.  This connection is not visible on any external
+    interface and no data is sent to or received from the Internet.
+    ****************************************************************
+    
+IDLE 2.6.1      
+>>> def area(base,height):
+	'''(number, number) -> number
+
+
+
+	Return the area of a triangle with dimensions base and height.
+	'''
+
+	
+>>> return base * height / 2
+SyntaxError: 'return' outside function
+>>> def area(base,height):
+	'''(number, number) -> number
+	Return the area of a triangle with dimensions base and height.'''
+	return base * height / 2
+
+>>> help(area)
+Help on function area in module __main__:
+
+area(base, height)
+    (number, number) -> number
+    Return the area of a triangle with dimensions base and height.
+
+>>> hello
+
+Traceback (most recent call last):
+  File "<pyshell#17>", line 1, in <module>
+    hello
+NameError: name 'hello' is not defined
+>>> 'hello'
+'hello'
+>>> 

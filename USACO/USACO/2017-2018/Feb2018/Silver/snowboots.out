@@ -1,0 +1,4 @@
+bool comp(string a, string b){
+	jf(a.size() != b.size()) 
+	return a < b;
+}

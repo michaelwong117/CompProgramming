@@ -1,0 +1,51 @@
+Finding Barn Locations
+======================
+Time limit  : 3 sec
+Memory limit: 16 MB
+-------------------
+
+Farmer John is looking for a place to build his new barn. His farm is an N
+x M (1 <= N, M <= 200) grid of squares, and he has assigned each square a
+certain rating (-5,000 <= rating <= 5,000) according to how high of a
+quality the square is. FJ can choose any non-empty rectangular section of
+the farm to place his barn on, but he will only accept a certain rectangle
+if its total rating (which is the sum of the ratings of all squares inside
+it) is at least some number R (-100,000,000 <= R <= 100,000,000) that he
+has decided on beforehand.
+
+Given the ratings of each square of the farm, determine how many different
+possible rectangular sections FJ can use to build his new barn.
+
+PROBLEM NAME: barnloc
+
+INPUT FORMAT:
+
+* Line 1: Three space-separated integers: N, M, and R.
+
+* Lines 2..N+1: Line i+1 contains M space-separated integers
+        representing the ratings of the squares in row i of the farm.
+
+SAMPLE INPUT:
+
+2 3 0
+1 -2 1
+-2 -1 -2
+
+INPUT DETAILS:
+
+The farm is a 2 x 3 grid, and FJ wants a nonnegative total rating.
+
+OUTPUT FORMAT:
+
+* Line 1: A single integer representing the number of different
+        rectangles FJ can choose that have a total rating of at least
+        R.
+
+SAMPLE OUTPUT:
+
+3
+
+OUTPUT DETAILS:
+
+FJ can choose either of the 1's as his rectangle, as well as the "1 -2 1"
+rectangle at the top.

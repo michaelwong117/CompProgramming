@@ -1,0 +1,23 @@
+Sample
+Hello World! (hello) - [16 MB, 3 sec]
+This is a test! (test) - [16 MB, 3 sec]
+
+Exam 1 (May 5, 9:30am-1:00pm)
+Fish (fish) - [16 MB, 1 sec]
+Farmer (farmer) - [16 MB, 1 sec]
+Seeing the Boundary (boundary) - [64 MB, 1 sec]
+
+Exam 2 (May 5, 2:00pm-5:30pm)
+Trail Maintenance (maintenance) - [64 MB, 1 sec]
+Ricehub (ricehub) - [256 MB, 1 sec]
+Comparing Code (code) - [64 MB, 2 sec]
+
+Exam 3 (May 6, 9:30am-1:00pm)
+Phidias (phidias) - [16 MB, 1 sec]
+Bus Terminals (bus) - [32 MB, 4 sec]
+Jousting tournament (tournament) - [256 MB, 1 sec]
+
+Exam 4 (May 6, 2:00pm-5:30pm)
+Hermes (hermes) - [16 MB, 1 sec]
+The Troublesome Frog (frog) - [64 MB, 2 sec]
+Empodia (empodia) - [128 MB, 1 sec]

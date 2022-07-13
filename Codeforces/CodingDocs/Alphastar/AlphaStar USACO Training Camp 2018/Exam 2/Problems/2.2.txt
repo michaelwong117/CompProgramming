@@ -1,0 +1,107 @@
+Rice Hub
+======================
+Time limit  : 1 sec
+Memory limit: 32 MB
+--------------------
+
+In the countryside, you can find a long straight road known as the 
+Rice Way. Along this road there are R rice fields. Each field is 
+located at an integer coordinate between 1 and L, inclusive. The 
+rice fields will be presented in non-decreasing order of their 
+coordinates. Formally, for 0 <= i < R, rice field i is at coordinate 
+X[i]. You may assume that 1 <= X[0] <= ... <= X[R-1] <= L.
+
+Please note that multiple rice fields may share the same coordinate.
+
+We plan to construct a single rice hub as a common place to store as 
+much of the harvest as possible. As with the rice fields, the hub 
+has to be at an integer coordinate between 1 and L, inclusive. The 
+rice hub can be at any location, including one that already contains 
+one or more rice fields.
+
+Each rice field produces exactly 1 truckload of rice every harvest 
+season. To transport the rice to the hub, the city has to hire a 
+truck driver. The driver charges 1 dollar to transport a truckload of 
+rice per unit of distance towards the hub. In other words, the cost 
+of transporting rice from a given field to the rice hub is numerically 
+equal to the difference between their coordinates.
+
+Unfortunately, our budget for this season is tight: we may only spend 
+at most B dollars on transportation. Your task is to help us 
+strategically place the hub to gather as much rice as possible.
+
+Write a program that takes the following parameters:
+
+* R - the number of rice fields. The fields are numbered 0 through R-1.
+* L - the maximum coordinate.
+* X - a one-dimensional array of integers sorted from smallest to 
+    largest. For each 0 <= i < R, field i is located at X[i].
+* B - the budget.
+
+Your program must find an optimal location of the hub and return the 
+maximum number of truckloads of rice that can be transported to the 
+hub within the budget.
+
+Note that the total cost of transporting the rice can be very large. 
+The budget is given as a 64-bit integer, and we recommend that you 
+use 64-bit integers in your computation. In C/C++, use the type 
+long long; in Java, use the type long.
+
+Consider the case where R=5, L=20, B=6, and X=[1,2,10,12,14].
+
+v  v                       v     v     v
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+
+For this case, there are multiple optimal locations for the hub: 
+you can place it anywhere between locations 10 and 14, inclusive. 
+The figure above shows one of these optimal locations. You will 
+then be able to transport rice from fields at coordinates 10, 12, 
+and 14. For any optimal hub location, the total cost of this 
+transportation will be at most 6 dollars. Clearly, no hub location 
+will allow us to gather rice from more than three fields, hence 
+this solution is optimal and the program should output 3.
+
+Input Format:
+
+* Line 1: R, L, and B
+* Lines 2 to R+1: locations of rice fields; i.e., line i+2 contains 
+  X[i], for 0 <= i < R.
+
+- Subtask 1 (10% of points):
+    1 <= R <= 100
+    1 <= L <= 100
+    0 <= B <= 10 000
+    No two rice fields share the same coordinate (only for this subtask).
+
+- Subtask 2 (20% of points)
+    1 <= R <= 500
+    1 <= L <= 10 000
+    0 <= B <= 1 000 000
+
+- Subtask 3 (30% of points)
+    1 <= R <= 5 000
+    1 <= L <= 1 000 000
+    0 <= B <= 2 000 000 000
+
+- Subtask 4 (40% of points)
+    1 <= R <= 100 000
+    1 <= L <= 1 000 000 000
+    0 <= B <= 2 000 000 000 000 000
+
+Output Format:
+
+One integer, the expected solution.
+
+Sample Input:
+
+5 20 6
+1
+2
+10
+12
+14
+
+Sample Output:
+
+3
